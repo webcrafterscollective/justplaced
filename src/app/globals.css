@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-white text-gray-900 font-sans antialiased; /* White background, very dark gray (almost black) for main text */
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply text-black font-semibold; /* Black for headings for strong emphasis */
+}
+
+/* Custom component styles for a standard light theme */
+@layer components {
+  .section-padding {
+    @apply py-16 lg:py-24;
+  }
+  .container-custom {
+    @apply container mx-auto px-6 lg:px-10; 
+  }
+  /* Ensure h2-heading inherits the global h2 style or define explicitly if different */
+  .h2-heading { 
+    @apply text-3xl sm:text-4xl lg:text-5xl font-bold mb-6 tracking-tight text-black; 
+  }
+  .h3-heading {
+    @apply text-2xl sm:text-3xl font-semibold mb-4 tracking-tight text-black;
+  }
+  .p-lead {
+    @apply text-lg lg:text-xl text-gray-700 max-w-3xl mx-auto text-center; /* Darker gray for lead paragraphs */
+  }
+  .p-base { /* A general paragraph style for good readability */
+    @apply text-base text-gray-800 leading-relaxed;
+  }
+  .text-muted { /* For less prominent text, ensuring it's still very readable */
+    @apply text-gray-600;
+  }
+
+  .button-primary {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-medium py-3 px-6 rounded-md transition-colors duration-300 ease-in-out transform hover:scale-105 shadow-md;
+  }
+  .button-secondary {
+    @apply border-2 border-blue-600 text-blue-600 hover:bg-blue-600 hover:text-white font-medium py-2.5 px-5 rounded-md transition-colors duration-300;
+  }
+  .card-base {
+    @apply bg-gray-50 p-6 sm:p-8 rounded-lg shadow-md; /* Off-white/very light gray for cards */
+  }
+  .card-interactive:hover {
+    @apply shadow-lg scale-[1.02]; /* More subtle hover effect */
+  }
+  
+  /* Forms for light theme */
+  .form-input-light {
+    @apply mt-1 block w-full px-4 py-2.5 bg-white border border-gray-400 rounded-md shadow-sm placeholder-gray-500 
+           focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 sm:text-sm text-gray-900;
+  }
+  .form-label-light {
+    @apply block text-sm font-medium text-gray-800 mb-1; /* Darker label */
+  }
+
+  /* Links */
+  .link-primary {
+    @apply text-blue-600 hover:text-blue-700 hover:underline;
+  }
+  .link-muted { /* For less prominent links, like in footer */
+    @apply text-gray-700 hover:text-blue-600 hover:underline;
+  }
+}

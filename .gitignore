@@ -1,0 +1,16 @@
+# .gitignore
+node_modules/
+.firebase/
+.next/
+.env
+.DS_Store
+*.zip
+*.log
+*.node
+
+.env.local
+*.json
+*.key
+*.pem
+*.p12
+
